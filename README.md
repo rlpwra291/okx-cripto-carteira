@@ -1,278 +1,265 @@
-# OKX trading fees: Maker、Taker、VIP 等级与真实交易成本完整说明
+# como usar a OKX: guia prático para criar conta, comprar cripto, negociar e usar a carteira Web3
 
-When people search for **OKX trading fees**, they usually want a simple answer: how much does OKX charge when buying, selling, or trading crypto?
+Quem pesquisa **como usar a OKX** normalmente quer resolver uma dúvida bem concreta: como abrir a conta, passar pela verificação, colocar dinheiro, comprar criptomoedas e depois retirar ou transferir os ativos sem escolher a rede errada.
 
-The difficult part is that there is no single OKX fee rate for every user and every product. Your actual cost depends on several variables:
+A plataforma reúne várias áreas diferentes. Há a conta de exchange para comprar e vender cripto, o mercado à vista, contratos e outros produtos de trading, além da **OKX Wallet**, que funciona como uma carteira Web3 de autocustódia. O caminho mais simples é começar pela conta principal e deixar os recursos avançados para depois.
 
-- Whether the order is executed as a maker or taker
-- Whether you trade spot, margin, futures, options, or spreads
-- Your current OKX fee tier
-- Your region and account entity
-- The trading pair or instrument
-- Whether you use the order book, Convert, or an express Buy/Sell route
-- Additional costs such as futures funding, liquidation, withdrawals, or payment processing
+Este guia mostra como usar a OKX desde o primeiro acesso, explica onde ficam as principais funções, compara os níveis de taxas publicados pela plataforma e destaca os erros que mais costumam causar problemas em depósitos, saques e transferências.
 
-For U.S. users, OKX’s published fee framework lists a Regular tier plus VIP 1 through VIP 9. The Regular tier starts at **0.200% maker and 0.350% taker** for the standard fee groups, while higher VIP levels reduce those rates and may eventually provide negative maker fees.
+> A disponibilidade de produtos, métodos de pagamento, limites e taxas pode variar conforme o país, o tipo de conta e as regras aplicáveis à sua região. Antes de confirmar uma operação, confira os dados mostrados no próprio aplicativo.
 
-This guide explains how OKX trading fees work, which fees matter in practice, how to calculate them, and which fee tier may fit different trading styles.
+## Como abrir uma conta na OKX
 
-> Fee schedules can differ by region, product, trading pair, and account status. The rate displayed inside your logged-in OKX account and order panel is the one to use before placing a trade.
+A criação da conta começa pelo site ou aplicativo da OKX. A plataforma informa que é possível fazer o registro usando e-mail, telefone e, em determinadas regiões, contas como Google, Apple ou Telegram. Depois do cadastro, será necessário concluir a verificação de identidade para acessar os serviços disponíveis para o seu perfil.
 
-## OKX trading fees at a glance
+Para começar:
 
-The first distinction is between **maker fees** and **taker fees**.
+1. Abra a [página de cadastro da OKX](https://okx.com/join/CASH20).
+2. Crie a conta usando um método disponível para sua região.
+3. Confirme o e-mail ou número de telefone, caso seja solicitado.
+4. Ative a autenticação em dois fatores.
+5. Complete a verificação de identidade dentro do aplicativo.
+6. Leia as informações de limites, métodos de depósito e produtos disponíveis antes de enviar dinheiro.
 
-A maker order adds liquidity to the order book. A taker order removes liquidity by matching with an existing order. Market orders are usually taker orders, while a limit order can be either maker or taker depending on how it is filled. A limit order that executes immediately against an existing order may still receive the taker rate.
+A verificação normalmente exige um documento de identificação e, em alguns casos, uma confirmação adicional. A OKX informa que o envio para análise costuma levar alguns minutos, mas o processo completo pode levar até 24 horas quando são necessárias verificações extras.
 
-For U.S. customers covered by the current published framework, the standard fee groups are listed as follows:
+O link acima é o convite com o código informado para esta publicação. Como campanhas de indicação podem depender do país, do tipo de conta e das condições exibidas no momento do cadastro, confira na tela de registro se o benefício aparece antes de concluir a inscrição.
 
-| OKX fee tier | Asset balance or 30-day volume requirement | Group 1 maker / taker | Group 2 maker / taker | Group 3 maker / taker | Purchase link |
-| --- | ---: | ---: | ---: | ---: | --- |
-| Regular | $0–$100,000 | 0.200% / 0.350% | 0.200% / 0.350% | 0.200% / 0.350% | [ Open OKX with the referral link](https://okx.com/join/CASH20) |
-| VIP 1 | $100,001–$250,000 | 0.100% / 0.200% | 0.100% / 0.200% | 0.100% / 0.200% | [ Check your OKX eligibility](https://okx.com/join/CASH20) |
-| VIP 2 | $250,001–$500,000 | 0.075% / 0.150% | 0.075% / 0.150% | 0.075% / 0.150% | [ View OKX account options](https://okx.com/join/CASH20) |
-| VIP 3 | $500,001–$1,000,000 | 0.060% / 0.125% | 0.060% / 0.125% | 0.060% / 0.125% | [ Start with OKX](https://okx.com/join/CASH20) |
-| VIP 4 | $1,000,001–$2,500,000 | 0.050% / 0.100% | 0.050% / 0.100% | 0.050% / 0.100% | [ Review OKX trading access](https://okx.com/join/CASH20) |
-| VIP 5 | $2,500,001–$5,000,000 | 0.045% / 0.080% | 0.045% / 0.080% | 0.045% / 0.080% | [ Open an OKX account](https://okx.com/join/CASH20) |
-| VIP 6 | $5,000,001–$10,000,000, with a higher Group 2 volume range | 0.040% / 0.070% | 0.040% / 0.070% | 0.040% / 0.070% | [ Check the OKX fee structure](https://okx.com/join/CASH20) |
-| VIP 7 | Group 2 volume of $50,000,001–$75,000,000 | -0.0020% / 0.0250% | -0.0050% / 0.0350% | -0.0100% / 0.0400% | [ Apply through OKX](https://okx.com/join/CASH20) |
-| VIP 8 | Group 2 volume of $75,000,001–$125,000,000 | -0.0050% / 0.0200% | -0.0100% / 0.0300% | -0.0150% / 0.0350% | [ Explore OKX VIP access](https://okx.com/join/CASH20) |
-| VIP 9 | Group 2 volume of $125,000,001 or more | -0.0075% / 0.0175% | -0.0100% / 0.0250% | -0.0200% / 0.0300% | [ Trade through OKX](https://okx.com/join/CASH20) |
+## O que fazer logo depois do cadastro
 
-The U.S. fee framework uses different fee groups for different asset categories. The table above reflects the rates published by OKX for the framework, but it should not be treated as a universal rate card for every country or every product. OKX states that its fees may vary by region, and the live fee page may show rates tied to your own account.
+Depois de entrar na conta, não comece pelo botão de alavancagem, futuros ou qualquer função com risco elevado. Primeiro, organize o básico:
 
-The Regular tier is the relevant starting point for most new users. VIP rates are aimed at accounts with significant assets or high 30-day trading volume. Simply opening an account does not automatically provide VIP pricing.
+- Crie uma senha exclusiva para a OKX.
+- Ative a autenticação em dois fatores com um aplicativo autenticador.
+- Confira os dispositivos e sessões conectados.
+- Verifique se o nome da conta corresponde aos seus documentos.
+- Leia os limites de depósito e retirada disponíveis para seu país.
+- Faça um depósito pequeno antes de movimentar valores maiores.
+- Salve os canais oficiais de suporte e verificação da plataforma.
 
-## How maker and taker fees work
+A autenticação em dois fatores ajuda a reduzir o risco de acesso indevido, mas não substitui cuidados básicos. Nunca compartilhe códigos temporários, senha, chave privada ou frase-semente. Também não confirme uma transação só porque alguém enviou uma mensagem dizendo ser do suporte.
 
-The maker/taker distinction is based on execution, not merely the button or order type you select.
+A conta de exchange e a carteira Web3 são coisas diferentes. Na conta de exchange, a OKX mantém a infraestrutura da plataforma e você acessa os recursos de compra, venda, conversão, depósito e saque. Na carteira Web3, você controla as chaves da carteira e assume a responsabilidade pela frase-semente.
 
-### Maker orders
+## Como depositar dinheiro ou criptomoedas
 
-A maker order sits on the order book and waits for another trader to match it. Because it adds liquidity, the maker rate is generally lower than the taker rate.
+A maneira de financiar a conta depende da região. Alguns usuários podem encontrar transferência bancária, compra com cartão, conversão direta ou trading P2P. Outros podem ter apenas parte dessas opções.
 
-For example, if a user places a limit order below the current market price and that order remains on the book until another order matches it, the trade may be classified as maker execution.
+No aplicativo, procure a área **Ativos** ou **Depositar** e escolha entre moeda fiduciária e criptomoeda. Se selecionar uma criptomoeda, a plataforma exibirá um endereço de depósito e uma rede compatível.
 
-### Taker orders
+Essa parte merece atenção. Para depositar cripto, o ativo e a rede precisam corresponder ao que aparece na OKX. Enviar um token por uma rede incompatível pode fazer com que os fundos não sejam creditados automaticamente ou exigir um processo de recuperação que não é garantido.
 
-A taker order matches an existing order immediately. Market orders normally fall into this category because they are designed to execute at the best available prices rather than wait.
+Antes de copiar o endereço, confira:
 
-A limit order can also be charged at the taker rate if it matches immediately with orders already resting on the book. This is one of the most common sources of confusion for newer traders. “Limit order” does not automatically mean “maker fee.”
+- Nome do ativo.
+- Rede selecionada.
+- Endereço completo.
+- Memo, tag ou comentário, quando exigido.
+- Valor mínimo de depósito.
+- Eventuais confirmações necessárias na blockchain.
 
-### Why the difference matters
+Faça um teste com uma quantia pequena quando estiver usando uma rede pela primeira vez. A diferença entre Ethereum, Arbitrum, Tron, Solana, BNB Chain e outras redes não é um detalhe visual; são ambientes diferentes, com endereços, taxas e regras de transferência próprios.
 
-Suppose a trader completes $10,000 of spot volume:
+### Depósito por transferência ou cartão
 
-- At a 0.200% maker rate, the trading fee is about $20.
-- At a 0.350% taker rate, the trading fee is about $35.
+Quando a opção estiver disponível, o caminho costuma ser semelhante:
 
-That difference is $15 on one side of the trade. If the trader opens and closes a position, the relevant notional may be charged on both executions. For active traders, execution style can matter more than a small change in the headline fee percentage.
+1. Abra **Comprar cripto** ou **Depositar**.
+2. Escolha a moeda de pagamento.
+3. Selecione o método oferecido para sua localização.
+4. Confira o valor final, a cotação e as taxas.
+5. Confirme a operação no provedor de pagamento.
 
-The practical lesson is simple: check the maker and taker rates shown in the order panel before submitting the order, then review the actual fill classification afterward.
+O valor recebido pode ser diferente do valor digitado por causa de taxa, spread, conversão cambial ou prazo de processamento. A confirmação exibida antes do pagamento é a referência mais importante.
 
-## How to calculate OKX spot trading fees
+## Como comprar criptomoedas na OKX
 
-For spot and margin trading, OKX describes the basic calculation as:
+Há três caminhos comuns para comprar cripto na OKX:
 
-text
-Trading fee = applicable fee rate × amount of crypto bought or sold
+- Compra direta com moeda fiduciária.
+- Conversão entre ativos já depositados.
+- Trading P2P.
 
+Para quem está começando, a função de conversão costuma ser mais simples do que o livro de ordens. Você escolhe o ativo que possui, o ativo que deseja receber e verifica a cotação apresentada antes de confirmar.
 
-The fee is charged when the order is filled. If you buy crypto, the fee may be deducted from the crypto you receive. If you sell crypto, the fee may be deducted from the proceeds. The exact fee currency depends on the trade direction, product, and execution details.
+O procedimento geral é:
 
-### Example: buying crypto
+1. Toque em **Comprar cripto** ou **Converter**.
+2. Escolha a moeda de pagamento ou o ativo de origem.
+3. Selecione a criptomoeda que deseja receber.
+4. Digite o valor.
+5. Confira cotação, taxa, quantidade final e prazo.
+6. Confirme apenas depois de revisar todos os dados.
 
-Assume:
+A cotação de conversão pode mudar rapidamente. Se o valor mostrado expirar, será necessário solicitar uma nova cotação.
 
-- Trade size: $1,000
-- Applicable taker rate: 0.350%
+### Como comprar usando o P2P
 
-The estimated trading fee is:
+No P2P, você escolhe uma oferta de outro usuário e paga usando o método indicado no anúncio. A OKX informa que, durante o processo, o ativo comprado pode ficar retido até que o pagamento seja confirmado e o vendedor libere a criptomoeda.
 
-text
-$1,000 × 0.350% = $3.50
+O processo costuma seguir estes passos:
 
+1. Abra **Comprar cripto**.
+2. Entre em **Trading P2P**.
+3. Escolha a moeda que deseja pagar e a criptomoeda que quer receber.
+4. Filtre por forma de pagamento, limite da ordem e tipo de anúncio.
+5. Escolha uma oferta e confira o perfil do comerciante.
+6. Digite um valor dentro do limite da ordem.
+7. Confirme os dados da conta de pagamento.
+8. Faça a transferência exatamente como indicado.
+9. Marque a opção de pagamento concluído.
+10. Aguarde a liberação da cripto.
 
-This calculation covers the trading commission itself. It does not automatically include a possible spread, price movement, deposit cost, withdrawal cost, or payment-provider charge.
+Não faça o pagamento fora do fluxo indicado na ordem e não marque uma transação como paga antes de realmente transferir o dinheiro. Também não aceite pedidos para conversar ou pagar por outro canal quando isso não for necessário para concluir a ordem.
 
-### Example: selling crypto
+A própria OKX alerta que o usuário deve verificar os dados do vendedor e observar o prazo da ordem. Se a ordem estiver perto de expirar, pagar sem que o pagamento seja registrado pode criar um problema desnecessário.
 
-Assume:
+## Como negociar no mercado à vista
 
-- Sale value: $1,000
-- Applicable maker rate: 0.200%
+O mercado à vista, normalmente chamado de **Spot**, é onde você compra ou vende um ativo pelo preço disponível no mercado. É a área mais adequada para entender o funcionamento básico das ordens antes de estudar contratos futuros ou margem.
 
-The estimated trading fee is:
+Na tela de trading, você encontrará:
 
-text
-$1,000 × 0.200% = $2.00
+- Par de negociação, como BTC/USDT.
+- Livro de ofertas.
+- Gráfico de preço.
+- Campo de quantidade.
+- Tipo de ordem.
+- Saldo disponível.
+- Estimativa de taxa.
+- Histórico de ordens.
 
+As ordens mais comuns são:
 
-The final amount can differ slightly if the order receives multiple fills at different prices or if the actual execution is classified differently from what you expected.
+### Ordem a mercado
 
-OKX says the order placement panel displays the maker and taker rates that apply to the account and instrument. The final fee is available in Order History after the fill is completed.
+A ordem a mercado tenta executar imediatamente pelo melhor preço disponível no livro. Ela é simples, mas o preço final pode variar, especialmente em ativos com pouca liquidez ou durante movimentos fortes.
 
-## Futures fees are based on position value, not margin
+### Ordem limitada
 
-Futures trading requires more care because the trading fee is calculated from the position’s notional value, not simply the amount of margin deposited.
+Na ordem limitada, você define o preço máximo que aceita pagar ou o preço mínimo pelo qual aceita vender. A ordem só será executada se o mercado alcançar aquele preço e houver liquidez suficiente.
 
-For USDT-margined and USDC-margined futures, the general formula is:
+Uma ordem limitada pode atuar como maker ou taker, dependendo de como for executada. A diferença influencia a taxa cobrada.
 
-text
-Futures trading fee =
-fee rate × number of contracts × contract multiplier × contract size × fill price
+### Ordem stop
 
+A ordem stop pode ser usada para acionar uma compra ou venda quando o preço atingir determinado nível. Como a configuração varia por produto, confira o tipo de gatilho, o preço de disparo e o tipo de execução antes de confirmar.
 
-OKX’s example uses a BTCUSDT perpetual contract with a contract size of 0.01 BTC. At a BTC price of $20,000, 100 contracts represent a $20,000 position. Using a 0.05% taker rate, the fee would be $10 for that execution. At a 0.02% maker rate, the fee would be $4.
+Para quem está aprendendo, vale começar com valores pequenos e uma única operação de teste. O objetivo inicial é entender o fluxo: selecionar o par, escolher o tipo de ordem, revisar a quantidade, observar a taxa e conferir o resultado no histórico.
 
-This is where leverage causes a lot of bad arithmetic.
+## Taxas da OKX: como entender maker, taker e níveis VIP
 
-If you deposit $2,000 as margin and open a $20,000 position with 10x leverage, the fee is calculated against the $20,000 position value. It is not calculated only against the $2,000 margin.
+As taxas dependem da região, do produto, do par negociado e do nível da conta. A OKX explica que a taxa maker é normalmente associada a ordens que adicionam liquidez ao livro, enquanto a taxa taker é aplicada quando a ordem é executada imediatamente contra uma oferta existente.
 
-A position that looks cheap to open because of leverage can still create meaningful fees if:
+A plataforma também orienta que a taxa aplicável pode ser consultada no painel de envio da ordem. O valor final só fica completamente determinado quando a ordem é executada, pois ela pode ser preenchida em partes, com preços diferentes e em condições distintas.
 
-- The position is large
-- It is opened and closed frequently
-- Both sides execute as taker
-- Funding payments accumulate
-- The position is liquidated
+A tabela abaixo resume os níveis publicados na página de taxas consultada para a estrutura padrão em USD. Ela serve para entender a lógica de progressão, mas não deve ser usada para substituir a taxa exibida na sua própria conta.
 
-OKX also states that futures may involve funding fees, liquidation fees, and an expiry settlement fee. Funding is separate from the trading commission and is exchanged between long and short traders rather than being treated as the same type of trading fee.
+| Nível | Ativos ou volume de 30 dias | Taxa maker | Taxa taker | Período |
+| --- | ---: | ---: | ---: | --- |
+| Usuário regular | Ativos de US$ 0 a US$ 100.000 ou volume de US$ 0 a US$ 100.000 | 0,2000% | 0,3500% | Volume móvel de 30 dias |
+| VIP 1 | Ativos de US$ 100.001 a US$ 200.000 ou volume de US$ 100.001 a US$ 250.000 | 0,1000% | 0,2000% | Volume móvel de 30 dias |
+| VIP 2 | Ativos de US$ 200.001 a US$ 2.000.000 ou volume de US$ 250.001 a US$ 500.000 | 0,0750% | 0,1500% | Volume móvel de 30 dias |
+| VIP 3 | Ativos de US$ 2.000.001 a US$ 5.000.000 ou volume de US$ 500.001 a US$ 1.000.000 | 0,0600% | 0,1250% | Volume móvel de 30 dias |
+| VIP 4 | Ativos de US$ 5.000.001 a US$ 20.000.000 ou volume de US$ 1.000.001 a US$ 2.500.000 | 0,0500% | 0,1000% | Volume móvel de 30 dias |
+| VIP 5 | Ativos de US$ 20.000.001 a US$ 50.000.000 ou volume de US$ 2.500.001 a US$ 5.000.000 | 0,0450% | 0,0800% | Volume móvel de 30 dias |
+| VIP 6 | Ativos de US$ 50.000.001 a US$ 100.000.000 ou volume de US$ 5.000.001 a US$ 50.000.000 | 0,0400% | 0,0700% | Volume móvel de 30 dias |
+| VIP 7 | Ativos de US$ 100.000.001 a US$ 250.000.000 ou volume de US$ 50.000.001 a US$ 75.000.000 | -0,0010% | 0,0230% | Volume móvel de 30 dias |
+| VIP 8 | Ativos de US$ 250.000.001 a US$ 500.000.000 ou volume de US$ 75.000.001 a US$ 125.000.000 | -0,0025% | 0,0200% | Volume móvel de 30 dias |
+| VIP 9 | Ativos acima de US$ 500.000.001 ou volume acima de US$ 125.000.001 | -0,0050% | 0,0150% | Volume móvel de 30 dias |
 
-## Options and spreads have separate fee logic
+A estrutura de taxas publicada pode ser alterada, e a página regional pode apresentar números diferentes. A OKX informa que os níveis são atualizados diariamente e podem considerar saldo de ativos ou volume de negociação de 30 dias.
 
-Options do not use exactly the same calculation as spot or futures.
+Na prática, usuários iniciantes devem prestar mais atenção a quatro custos:
 
-OKX describes options trading fees using a minimum calculation involving the fee rate, contract multiplier, contract size, number of contracts, and a cap based on the option premium. Exercise and liquidation fees can also have separate rules. Day options may have different exercise-fee treatment from options that expire on Fridays.
+1. Taxa de negociação.
+2. Spread ou diferença entre preços de compra e venda.
+3. Taxa de saque da criptomoeda.
+4. Taxa de rede, quando a operação envolve transferência on-chain.
 
-For traders using RFQ options combo trades, OKX says eligible combo trades may receive up to a 50% fee discount. The exact result depends on the trade structure and applicable product rules.
+Uma taxa percentual pequena pode pesar quando há muitas operações. Também não faz sentido escolher uma ordem limitada apenas para tentar pagar menos se a ordem ficar sem execução ou se o preço mudar antes do preenchimento.
 
-Spreads are also handled separately. OKX states that each instrument’s spread fee rate is 50% of its classic order-book rate as shown in the relevant fee tier.
+## Como retirar criptomoedas da OKX
 
-That means comparing a spot fee with an options or spread fee without checking the product-specific schedule can produce a misleading result.
+Para retirar um ativo, abra **Ativos**, escolha a criptomoeda e toque em **Sacar**. Depois, informe o endereço de destino, a rede e a quantidade.
 
-## OKX Convert and express Buy/Sell are not the same as order-book trading
+Confira estes pontos antes de confirmar:
 
-Users often assume that every crypto purchase has a clearly displayed maker or taker commission. That is not always the case.
+- O endereço pertence à carteira correta?
+- A rede de retirada é compatível com a rede de depósito?
+- Existe memo ou tag obrigatório?
+- O valor mínimo foi respeitado?
+- A taxa de retirada foi descontada?
+- O endereço foi copiado sem espaços ou caracteres alterados?
 
-When using OKX Convert or an express Buy/Sell flow, the platform may quote an all-in price instead of showing a separate order-book fee. The cost is reflected in the quoted price and the difference between the buy and sell prices, commonly described as the spread.
+A melhor prática é fazer primeiro uma retirada de teste. Depois que os fundos chegarem ao destino, você pode enviar o restante.
 
-This does not automatically mean Convert is expensive or that order-book trading is always cheaper. The result depends on:
+Não confunda o endereço da exchange com o endereço da OKX Wallet. A exchange é uma conta dentro da plataforma; a carteira Web3 é uma carteira separada, com endereço on-chain e controle de chaves pelo usuário.
 
-- The asset
-- The size of the transaction
-- Available liquidity
-- The quoted spread
-- Your normal maker/taker fee
-- Whether you need immediate execution
+## Como usar a OKX Wallet
 
-For a small one-time purchase, convenience may matter more than optimizing a few basis points. For frequent or larger trades, it is worth comparing the quoted amount with the order-book estimate before confirming.
+A OKX Wallet é uma carteira Web3 de autocustódia e multichain. A documentação da plataforma informa que ela permite administrar ativos em várias redes e acessar recursos como DEX, aplicativos descentralizados, NFTs e ferramentas relacionadas a DeFi.
 
-## What the OKX VIP program changes
+Para criar uma carteira no aplicativo:
 
-OKX VIP status is based on asset balance or 30-day trading volume. The platform reviews VIP status daily, and the applicable tier can determine lower trading rates across eligible products.
+1. Abra o app da OKX.
+2. Toque em **Web3**.
+3. Escolha **Criar carteira**.
+4. Defina uma senha.
+5. Faça o backup da carteira.
+6. Anote a frase-semente em um local seguro.
+7. Confirme a frase-semente quando solicitado.
 
-The published U.S. framework lists VIP tiers from VIP 1 to VIP 9. Higher levels require substantially more assets or trading volume. VIP 7 through VIP 9 can show negative maker rates in some fee groups, meaning qualifying maker trades may receive a rebate rather than paying a positive maker commission.
+A frase-semente é a chave de recuperação da carteira. Quem tiver acesso a ela pode controlar os ativos. A OKX não consegue recuperar a carteira se a frase for perdida, e o usuário não deve armazená-la em capturas de tela, conversas, e-mails ou arquivos desprotegidos.
 
-For ordinary retail traders, the important point is that VIP status is not a discount code in the usual sense. It is a tier determined by account activity or assets. A user should not increase trading volume solely to reach a lower fee tier unless the trading strategy already justifies that activity.
+A carteira Web3 não funciona como uma conta bancária. Uma transação enviada para o endereço errado, na rede errada ou para um contrato malicioso pode não ser reversível. Antes de conectar a carteira a um DApp, verifique o domínio, a rede, as permissões e o tipo de aprovação solicitado.
 
-OKX also advertises a VIP status-match process for eligible users who already hold a qualifying tier or can provide evidence of trading volume or assets on another exchange. The available matched level can depend on the market and eligibility review.
+## Exchange ou Wallet: qual usar?
 
-## How to reduce your effective OKX trading costs
+A escolha depende do que você quer fazer.
 
-Reducing fees is not only about finding the lowest percentage. The more useful question is how to reduce the total cost of executing your strategy.
+| Situação | Ferramenta mais adequada |
+| --- | --- |
+| Comprar cripto usando moeda fiduciária | Conta da OKX |
+| Negociar BTC, ETH ou outros pares | Mercado Spot da OKX |
+| Fazer conversão simples entre ativos | Função Converter |
+| Comprar por transferência entre usuários | Trading P2P |
+| Guardar uma frase-semente própria | OKX Wallet |
+| Usar DApps, DEXs ou NFTs | OKX Wallet |
+| Retirar cripto para outra plataforma | Função Sacar da conta de exchange |
 
-### Use maker execution when the strategy allows it
+Não é necessário usar todos os recursos. Para a maioria dos iniciantes, a sequência mais racional é criar a conta, concluir a verificação, ativar a segurança, depositar uma quantia pequena, comprar no mercado à vista ou por conversão e aprender a retirar o ativo com uma transferência de teste.
 
-A resting limit order may receive the maker rate, but there is no guarantee that every limit order will do so. If the order matches immediately, it may be treated as taker execution.
+## Erros comuns ao usar a OKX
 
-The order panel and final fill details are more reliable than assumptions based on the words “limit” or “market.”
+### Escolher a rede apenas porque a taxa parece menor
 
-### Check the current fee tier
+A rede mais barata só é útil se for aceita pelo endereço de destino. O destinatário precisa suportar exatamente o mesmo ativo e a mesma rede.
 
-Your rate may change after your asset balance or 30-day volume changes. OKX provides fee-tier information through the account area and trading interface. On the web, the relevant account section is listed as Assets > My trading fees. In the app, users can access their trading fee tier through account settings.
+### Ignorar o tipo de ordem
 
-### Compare order-book trading with Convert
+Uma ordem a mercado pode executar imediatamente com preço diferente do esperado. Uma ordem limitada pode não executar. A diferença deve ser entendida antes do envio.
 
-For a small transaction, Convert may be convenient. For larger transactions, compare the quoted amount with the expected order-book result, including the fee and possible spread.
+### Começar por futuros ou alavancagem
 
-The cheapest route depends on the asset and liquidity at that moment. There is no universal answer that applies to every trade.
+Produtos com margem, contratos e alavancagem ampliam tanto ganhos quanto perdas. Eles não são uma etapa obrigatória para aprender a usar a OKX.
 
-### Include both entry and exit fees
+### Confundir taxa de trading com taxa de saque
 
-A strategy that appears profitable before fees may look different after paying for both sides of the transaction.
+A taxa cobrada quando você compra ou vende não é a mesma usada para retirar um token da plataforma. Cada operação pode ter regras próprias.
 
-For futures, also account for:
+### Deixar a carteira Web3 sem backup
 
-- Opening fee
-- Closing fee
-- Funding payments
-- Possible liquidation fee
-- Expiry settlement fee where applicable
+Criar uma carteira e ignorar a frase-semente é deixar a recuperação para depois de um problema. Quando a carteira é autocustodial, a responsabilidade pela recuperação fica com o usuário.
 
-OKX notes that realized futures profit can differ from the floating profit shown while a position is open because realized results may include trading fees and funding fees.
+### Confiar em mensagens privadas
 
-### Avoid trading purely to chase a tier
+Suporte legítimo não precisa da sua senha, frase-semente ou código de autenticação. Desconfie de quem pede transferência para “desbloquear” saque ou promete recuperar fundos mediante pagamento.
 
-Lower fees are useful when they result from trading you already intended to do. They are less useful if reaching the tier requires unnecessary volume, larger positions, or excessive turnover.
+## Vale a pena começar pela OKX?
 
-A fee discount cannot compensate for poor execution, wide spreads, or avoidable losses.
+Para quem quer uma plataforma com compra, venda, conversão, P2P e acesso separado a recursos Web3, a OKX oferece um conjunto amplo de ferramentas. Essa variedade também deixa a interface mais carregada do que a de um aplicativo focado apenas em compra e venda simples.
 
-## Other charges that are separate from trading fees
+O melhor caminho é ignorar os recursos que você ainda não entende. Comece pelo mercado à vista, confira a taxa antes de cada ordem, teste depósitos e saques com valores pequenos e só depois explore a OKX Wallet ou produtos mais avançados.
 
-OKX distinguishes trading fees from several other costs:
-
-- Deposit fees
-- Withdrawal fees
-- Card transaction fees
-- Payment-provider charges
-- Futures funding fees
-- Liquidation fees
-- Expiry settlement fees
-- Spreads in Convert or express Buy/Sell
-
-OKX states that it does not charge a fee simply for opening or maintaining an account. Deposits, withdrawals, and card transactions follow separate pricing rules, while banks and payment providers may apply their own charges.
-
-This distinction matters when comparing exchanges. A platform with a low spot commission can still be more expensive for a particular user if the withdrawal cost, spread, or payment route is less favorable.
-
-## How to verify the fee before placing an order
-
-Before submitting a trade, use this short checklist:
-
-1. Open the exact trading pair or instrument.
-2. Check the maker and taker rates shown in the order panel.
-3. Confirm whether the product is spot, margin, futures, options, or another market.
-4. Estimate the fee using the expected filled amount.
-5. For futures, calculate the fee from the full position value rather than only the margin.
-6. Check the spread if using Convert or express Buy/Sell.
-7. After execution, open Order History and review the actual fee and fill classification.
-
-OKX says the final fee may differ from the estimate because an order can receive multiple fills, execute at different prices, or be classified as maker or taker based on what actually happened in the order book.
-
-## Is OKX expensive or cheap?
-
-The answer depends on what you trade and where your account is registered.
-
-For U.S. users covered by the published framework, the Regular rate of 0.200% maker and 0.350% taker is the baseline for the listed fee groups. VIP rates become progressively lower, with negative maker rates shown for the highest tiers in certain groups.
-
-That structure may suit active traders who can qualify for a better tier, but a casual user should focus on the complete transaction cost rather than one headline number. Execution type, spread, funding, withdrawal charges, and product selection all affect the result.
-
-The most practical approach is to use the referral link below to create or access the account, then verify the fee displayed for the exact market and region before trading.
-
-[👉 Use the OKX referral link and review your available trading fees](https://okx.com/join/CASH20)
-
-## Final takeaway
-
-OKX trading fees are tiered and product-specific. The main points are:
-
-- Maker orders generally cost less than taker orders.
-- A limit order can still receive the taker rate if it fills immediately.
-- Spot fees are calculated from the amount of crypto bought or sold.
-- Futures fees are calculated from position value, not just margin.
-- Funding fees are separate from trading fees.
-- Convert and express Buy/Sell may include the cost in the quoted spread.
-- VIP status is based on assets or 30-day trading volume.
-- The live rate in your logged-in OKX account is more important than a generic fee table.
-- Every trade should be checked on both entry and exit.
-
-For a small occasional purchase, convenience may be the deciding factor. For frequent trading, the difference between maker and taker execution, combined with the correct fee tier, can materially change the cost over time.
+Para abrir a conta pelo convite utilizado neste guia, acesse [👉 criar uma conta na OKX](https://okx.com/join/CASH20) e confirme na tela de cadastro quais condições estão disponíveis para sua região.
